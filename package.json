@@ -13,7 +13,7 @@
   "keywords": [],
   "scripts": {
     "compile-v3-types": "npx typechain --target ethers-v5 --out-dir src/types/v3 './node_modules/@uniswap/v3-core/artifacts/contracts/**/*.json' './node_modules/@uniswap/v3-periphery/artifacts/contracts/**/*.json'",
-    "compile-v2-types": "npx typechain --target ethers-v5 --out-dir src/types/v2 './node_modules/@uniswap/v2-core/build/*UniswapV2*.json' './node_modules/@uniswap/v2-periphery/build/*UniswapV2*.json'",
+    "compile-v2-types": "npx typechain --target ethers-v5 --out-dir src/types/v2 './node_modules/@uniswap/v2-core/build/*UniswapV2*.json' './node_modules/@uniswap/v3-periphery/build/*UniswapV2*.json'",
     "compile-router": "npx typechain --target ethers-v5 --out-dir src/types/other './node_modules/@uniswap/swap-router-contracts/artifacts/contracts/**/*.json'",
     "compile-external-types": "npx typechain --target ethers-v5 --out-dir src/types/other 'src/abis/**/*.json'",
     "build": "run-p compile-v3-types compile-v2-types compile-router compile-external-types && run-p build:*",
@@ -75,7 +75,7 @@
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "@uniswap/v2-core": "^1.0.1",
-    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "@phuphamdeltalabs/v3-periphery": "^2.0.1",
     "@uniswap/v3-core": "^1.0.0",
     "@uniswap/v3-periphery": "^1.1.1",
     "bunyan-debug-stream": "^2.0.0",
