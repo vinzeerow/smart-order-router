@@ -1,4 +1,4 @@
-import { ChainId } from '@uniswap/sdk-core';
+import { ChainId } from '@phuphamdeltalabs/sdkcore';
 
 import { log } from '../util/log';
 

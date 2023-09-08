@@ -2,8 +2,8 @@ import { parseUnits } from '@ethersproject/units';
 import {
   Currency,
   CurrencyAmount as CurrencyAmountRaw,
-} from '@uniswap/sdk-core';
-import { FeeAmount } from '@uniswap/v3-sdk';
+} from '@phuphamdeltalabs/sdkcore';
+import { FeeAmount } from '@phuphamdeltalabs/v3sdk';
 import JSBI from 'jsbi';
 
 export class CurrencyAmount extends CurrencyAmountRaw<Currency> {}

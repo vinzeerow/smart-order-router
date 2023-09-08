@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@uniswap/sdk-core';
+import { ChainId, Token } from '@phuphamdeltalabs/sdkcore';
 
 import { log } from '../util';
 import { ICache } from './cache';
