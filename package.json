@@ -1,6 +1,6 @@
 {
-  "name": "@uniswap/smart-order-router",
-  "version": "3.16.21",
+  "name": "@phuphamdeltalabs/smart-order-router",
+  "version": "2.0.0",
   "description": "Uniswap Smart Order Router",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -119,5 +119,8 @@
   },
   "oclif": {
     "commands": "./cli/commands"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
