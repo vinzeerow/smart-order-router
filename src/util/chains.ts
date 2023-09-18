@@ -16,6 +16,7 @@ export const SUPPORTED_CHAINS: ChainId[] = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.BASE,
+  ChainId.OP_BNB
   // Gnosis and Moonbeam don't yet have contracts deployed yet
 ];
 
@@ -274,6 +275,8 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
       return process.env.JSON_RPC_PROVIDER_AVALANCHE!;
     case ChainId.BASE:
       return process.env.JSON_RPC_PROVIDER_BASE!;
+    case ChainId.OP_BNB:
+      return process.env.JSON_RPC_PROVIDER_OPBNB!;
     default:
       throw new Error(`Chain id: ${id} not supported`);
   }
@@ -396,6 +399,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
   ),
   [ChainId.BASE_GOERLI]: new Token(
     ChainId.BASE_GOERLI,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.OP_BNB]: new Token(
+    ChainId.OP_BNB,
     '0x4200000000000000000000000000000000000006',
     18,
     'WETH',

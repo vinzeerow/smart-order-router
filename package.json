@@ -36,7 +36,7 @@
   "dependencies": {
     "@ethersproject/logger": "^5.7.0",
     "@phuphamdeltalabs/router-sdk": "^1.0.1",
-    "@phuphamdeltalabs/sdkcore": "^5.0.0",
+    "@phuphamdeltalabs/sdkcore": "^5.0.1",
     "@phuphamdeltalabs/universal-router-sdk": "^1.0.1",
     "@phuphamdeltalabs/v2-sdk": "^1.0.4",
     "@phuphamdeltalabs/v3sdk": "^1.0.1",

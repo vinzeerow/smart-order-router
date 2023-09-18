@@ -162,5 +162,12 @@ export const WETH9: {
     18,
     'WETH',
     'Wrapped Ether'
+  ),
+  [ChainId.OP_BNB]: new Token(
+    ChainId.OP_BNB,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
   )
 };

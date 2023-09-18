@@ -480,6 +480,15 @@ export const USDC_BASE_GOERLI = new Token(
   'USD Base Coin'
 )
 
+// OP_BNB Tokens 
+export const USDC_OP_BNB = new Token(
+  ChainId.OP_BNB,
+  '0x4F82c293CBfDBFf5A63431Fc904943c28CFEE787',
+  6,
+  'USDbC',
+  'USD Base Coin'
+)
+
 // Gnosis Tokens
 export const USDC_ETHEREUM_GNOSIS = new Token(
   ChainId.GNOSIS,
@@ -795,6 +804,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_BASE;
     case ChainId.BASE_GOERLI:
       return USDC_BASE_GOERLI;
+    case ChainId.OP_BNB:
+        return USDC_BASE_GOERLI;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }
