@@ -80,6 +80,8 @@ export const ID_TO_CHAIN_ID = (id: number): ChainId => {
       return ChainId.BASE;
     case 84531:
       return ChainId.BASE_GOERLI;
+    case 5611:
+      return ChainId.OP_BNB;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
@@ -103,6 +105,7 @@ export enum ChainName {
   AVALANCHE = 'avalanche-mainnet',
   BASE = 'base-mainnet',
   BASE_GOERLI = 'base-goerli',
+  OP_BNB = 'op-BNB',
 }
 
 
@@ -115,6 +118,7 @@ export enum NativeCurrencyName {
   MOONBEAM = 'GLMR',
   BNB = 'BNB',
   AVALANCHE = 'AVAX',
+  OPBNB = "BNB"
 }
 
 export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
@@ -178,6 +182,11 @@ export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
     'ETH',
     'ETHER',
     '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+  ],
+  [ChainId.OP_BNB]: [
+    'ETH',
+    'ETHER',
+    '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
   ]
 };
 
@@ -198,6 +207,7 @@ export const NATIVE_CURRENCY: { [chainId: number]: NativeCurrencyName } = {
   [ChainId.BNB]: NativeCurrencyName.BNB,
   [ChainId.AVALANCHE]: NativeCurrencyName.AVALANCHE,
   [ChainId.BASE]: NativeCurrencyName.ETHER,
+  [ChainId.OP_BNB]: NativeCurrencyName.OPBNB,
 };
 
 export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
@@ -236,6 +246,8 @@ export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
       return ChainName.BASE;
     case 84531:
       return ChainName.BASE_GOERLI;
+    case 5611:
+      return ChainName.OP_BNB;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
@@ -580,6 +592,30 @@ export class ExtendedEther extends Ether {
   }
 }
 
+function isOPBNB(chainId: number): chainId is ChainId.OP_BNB {
+  return chainId === ChainId.OP_BNB;
+}
+
+class OpBnbNativeCurrency extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId;
+  }
+
+  get wrapped(): Token {
+    if (!isBnb(this.chainId)) throw new Error('Not bnb');
+    const nativeCurrency = WRAPPED_NATIVE_CURRENCY[this.chainId];
+    if (nativeCurrency) {
+      return nativeCurrency;
+    }
+    throw new Error(`Does not support this chain ${this.chainId}`);
+  }
+
+  public constructor(chainId: number) {
+    if (!isBnb(chainId)) throw new Error('Not bnb');
+    super(chainId, 18, 'tBNB', 'BNB');
+  }
+}
+
 const cachedNativeCurrency: { [chainId: number]: NativeCurrency } = {};
 
 export function nativeOnChain(chainId: number): NativeCurrency {
@@ -598,7 +634,10 @@ export function nativeOnChain(chainId: number): NativeCurrency {
     cachedNativeCurrency[chainId] = new BnbNativeCurrency(chainId);
   } else if (isAvax(chainId)) {
     cachedNativeCurrency[chainId] = new AvalancheNativeCurrency(chainId);
-  } else {
+  } else if (isOPBNB(chainId)) {
+    cachedNativeCurrency[chainId] = new OpBnbNativeCurrency(chainId);
+  }
+   else {
     cachedNativeCurrency[chainId] = ExtendedEther.onChain(chainId);
   }
 

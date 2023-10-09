@@ -483,8 +483,8 @@ export const USDC_BASE_GOERLI = new Token(
 // OP_BNB Tokens 
 export const USDC_OP_BNB = new Token(
   ChainId.OP_BNB,
-  '0x4F82c293CBfDBFf5A63431Fc904943c28CFEE787',
-  6,
+  '0x766849b29d3d52b83476D7B7963C4Fd0E019A28B',
+  18,
   'USDbC',
   'USD Base Coin'
 )

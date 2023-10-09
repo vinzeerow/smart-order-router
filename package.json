@@ -1,6 +1,6 @@
 {
   "name": "@phuphamdeltalabs/smart-order-router",
-  "version": "2.0.0",
+  "version": "2.0.11",
   "description": "Uniswap Smart Order Router",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -36,8 +36,8 @@
   "dependencies": {
     "@ethersproject/logger": "^5.7.0",
     "@phuphamdeltalabs/router-sdk": "^1.0.1",
-    "@phuphamdeltalabs/sdkcore": "^5.0.1",
-    "@phuphamdeltalabs/universal-router-sdk": "^1.0.1",
+    "@phuphamdeltalabs/sdkcore": "^5.0.2",
+    "@phuphamdeltalabs/universal-router-sdk": "^1.0.7",
     "@phuphamdeltalabs/v2-sdk": "^1.0.4",
     "@phuphamdeltalabs/v3sdk": "^1.0.1",
     "@uniswap/default-token-list": "^11.2.0",
