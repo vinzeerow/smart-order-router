@@ -489,6 +489,15 @@ export const USDC_OP_BNB = new Token(
   'USD Base Coin'
 )
 
+// OP_BNB Tokens 
+export const USDC_ONUS_TESTNET = new Token(
+  ChainId.ONUS_TEST,
+  '0x6a4279572F5701AfE15E7a51BE0DDB9e8d97cF71',
+  18,
+  'USDC',
+  'USD token'
+)
+
 // Gnosis Tokens
 export const USDC_ETHEREUM_GNOSIS = new Token(
   ChainId.GNOSIS,
@@ -806,6 +815,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_BASE_GOERLI;
     case ChainId.OP_BNB:
         return USDC_BASE_GOERLI;
+    case ChainId.ONUS_TEST:
+          return USDC_ONUS_TESTNET;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

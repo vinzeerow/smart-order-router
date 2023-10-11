@@ -24,6 +24,7 @@ import {
   USDC_GOERLI,
   USDC_MAINNET,
   USDC_MOONBEAM,
+  USDC_ONUS_TESTNET,
   USDC_OP_BNB,
   USDC_OPTIMISM,
   USDC_OPTIMISM_GOERLI,
@@ -76,6 +77,7 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX],
   [ChainId.BASE]: [USDC_BASE],
   [ChainId.OP_BNB]: [USDC_OP_BNB],
+  [ChainId.ONUS_TEST]: [USDC_ONUS_TESTNET],
 };
 
 export type L1ToL2GasCosts = {

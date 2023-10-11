@@ -16,7 +16,8 @@ export const SUPPORTED_CHAINS: ChainId[] = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.BASE,
-  ChainId.OP_BNB
+  ChainId.OP_BNB,
+  ChainId.ONUS_TEST
   // Gnosis and Moonbeam don't yet have contracts deployed yet
 ];
 
@@ -82,6 +83,8 @@ export const ID_TO_CHAIN_ID = (id: number): ChainId => {
       return ChainId.BASE_GOERLI;
     case 5611:
       return ChainId.OP_BNB;
+    case 1945:
+      return ChainId.ONUS_TEST;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
@@ -106,6 +109,7 @@ export enum ChainName {
   BASE = 'base-mainnet',
   BASE_GOERLI = 'base-goerli',
   OP_BNB = 'op-BNB',
+  ONUSTESTNET = 'onus-testnet',
 }
 
 
@@ -118,7 +122,8 @@ export enum NativeCurrencyName {
   MOONBEAM = 'GLMR',
   BNB = 'BNB',
   AVALANCHE = 'AVAX',
-  OPBNB = "BNB"
+  OPBNB = "BNB",
+  ONUSTESTNET = "tONUS"
 }
 
 export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
@@ -187,6 +192,11 @@ export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
     'ETH',
     'ETHER',
     '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+  ],
+  [ChainId.ONUS_TEST]: [
+    'ETH',
+    'ETHER',
+    '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
   ]
 };
 
@@ -208,6 +218,7 @@ export const NATIVE_CURRENCY: { [chainId: number]: NativeCurrencyName } = {
   [ChainId.AVALANCHE]: NativeCurrencyName.AVALANCHE,
   [ChainId.BASE]: NativeCurrencyName.ETHER,
   [ChainId.OP_BNB]: NativeCurrencyName.OPBNB,
+  [ChainId.ONUS_TEST]: NativeCurrencyName.ONUSTESTNET,
 };
 
 export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
@@ -248,6 +259,8 @@ export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
       return ChainName.BASE_GOERLI;
     case 5611:
       return ChainName.OP_BNB;
+    case 1945:
+        return ChainName.ONUSTESTNET;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
@@ -289,6 +302,8 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
       return process.env.JSON_RPC_PROVIDER_BASE!;
     case ChainId.OP_BNB:
       return process.env.JSON_RPC_PROVIDER_OPBNB!;
+    case ChainId.ONUS_TEST:
+      return process.env.JSON_RPC_PROVIDER_ONUSTESTNET!;
     default:
       throw new Error(`Chain id: ${id} not supported`);
   }
@@ -422,6 +437,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
     18,
     'WETH',
     'Wrapped Ether'
+  ),
+  [ChainId.ONUS_TEST]: new Token(
+    ChainId.ONUS_TEST,
+    '0x5653a147156B1A1e0E09661e4841B2fFFb1cd438',
+    18,
+    'WONUS',
+    'Wrapped ONUS'
   )
 };
 
@@ -596,6 +618,10 @@ function isOPBNB(chainId: number): chainId is ChainId.OP_BNB {
   return chainId === ChainId.OP_BNB;
 }
 
+function isONUSTESTNET(chainId: number): chainId is ChainId.ONUS_TEST {
+  return chainId === ChainId.ONUS_TEST;
+}
+
 class OpBnbNativeCurrency extends NativeCurrency {
   equals(other: Currency): boolean {
     return other.isNative && other.chainId === this.chainId;
@@ -613,6 +639,26 @@ class OpBnbNativeCurrency extends NativeCurrency {
   public constructor(chainId: number) {
     if (!isBnb(chainId)) throw new Error('Not bnb');
     super(chainId, 18, 'tBNB', 'BNB');
+  }
+}
+
+class OnusTestnetNativeCurrency extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId;
+  }
+
+  get wrapped(): Token {
+    if (!isONUSTESTNET(this.chainId)) throw new Error('Not bnb');
+    const nativeCurrency = WRAPPED_NATIVE_CURRENCY[this.chainId];
+    if (nativeCurrency) {
+      return nativeCurrency;
+    }
+    throw new Error(`Does not support this chain ${this.chainId}`);
+  }
+
+  public constructor(chainId: number) {
+    if (!isBnb(chainId)) throw new Error('Not bnb');
+    super(chainId, 18, 'WONUS', 'ONUS');
   }
 }
 
@@ -636,6 +682,8 @@ export function nativeOnChain(chainId: number): NativeCurrency {
     cachedNativeCurrency[chainId] = new AvalancheNativeCurrency(chainId);
   } else if (isOPBNB(chainId)) {
     cachedNativeCurrency[chainId] = new OpBnbNativeCurrency(chainId);
+  } else if (isONUSTESTNET(chainId)) {
+    cachedNativeCurrency[chainId] = new OnusTestnetNativeCurrency(chainId);
   }
    else {
     cachedNativeCurrency[chainId] = ExtendedEther.onChain(chainId);

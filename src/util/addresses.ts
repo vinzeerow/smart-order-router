@@ -21,6 +21,8 @@ export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.BASE_GOERLI]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE_GOERLI].v3CoreFactoryAddress,
   [ChainId.BASE]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE].v3CoreFactoryAddress,
   [ChainId.OP_BNB]: CHAIN_TO_ADDRESSES_MAP[ChainId.OP_BNB].v3CoreFactoryAddress,
+  [ChainId.ONUS_TEST]: CHAIN_TO_ADDRESSES_MAP[ChainId.ONUS_TEST].v3CoreFactoryAddress,
+
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -36,6 +38,8 @@ export const QUOTER_V2_ADDRESSES: AddressMap = {
   [ChainId.BASE_GOERLI]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE_GOERLI].quoterAddress,
   [ChainId.BASE]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE].quoterAddress,
   [ChainId.OP_BNB]: CHAIN_TO_ADDRESSES_MAP[ChainId.OP_BNB].quoterAddress,
+  [ChainId.ONUS_TEST]: CHAIN_TO_ADDRESSES_MAP[ChainId.ONUS_TEST].quoterAddress,
+
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -56,6 +60,8 @@ export const UNISWAP_MULTICALL_ADDRESSES: AddressMap = {
   [ChainId.BASE_GOERLI]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE_GOERLI].multicallAddress,
   [ChainId.BASE]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE].multicallAddress,
   [ChainId.OP_BNB]: CHAIN_TO_ADDRESSES_MAP[ChainId.OP_BNB].multicallAddress,
+  [ChainId.ONUS_TEST]: CHAIN_TO_ADDRESSES_MAP[ChainId.ONUS_TEST].multicallAddress,
+
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -172,5 +178,12 @@ export const WETH9: {
     18,
     'WETH',
     'Wrapped Ether'
+  ),
+  [ChainId.ONUS_TEST]: new Token(
+    ChainId.ONUS_TEST,
+    '0x5653a147156B1A1e0E09661e4841B2fFFb1cd438',
+    18,
+    'WONUS',
+    'Wrapped ONUS'
   )
 };
