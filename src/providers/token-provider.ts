@@ -492,10 +492,10 @@ export const USDC_OP_BNB = new Token(
 // OP_BNB Tokens 
 export const USDC_ONUS_TESTNET = new Token(
   ChainId.ONUS_TEST,
-  '0x6a4279572F5701AfE15E7a51BE0DDB9e8d97cF71',
+  '0xeBaC619E4c0fD83124dA549c834eC52A6e1521AA',
   18,
   'USDC',
-  'USD token'
+  'USDC token'
 )
 
 // Gnosis Tokens
