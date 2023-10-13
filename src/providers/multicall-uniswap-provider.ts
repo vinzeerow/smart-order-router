@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { BaseProvider } from '@ethersproject/providers';
-import { ChainId } from '@phuphamdeltalabs/sdkcore';
+import { ChainId } from '@tpvinh/sdk-core';
 import _ from 'lodash';
 import stats from 'stats-lite';
 

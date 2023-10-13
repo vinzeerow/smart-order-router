@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
-import { ChainId, Currency, Token, TradeType } from '@phuphamdeltalabs/sdkcore';
+import { Protocol } from '@tpvinh/router-sdk';
+import { ChainId, Currency, Token, TradeType } from '@tpvinh/sdk-core';
 import _ from 'lodash';
 
 import {

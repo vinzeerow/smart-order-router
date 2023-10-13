@@ -1,8 +1,8 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
-import { ChainId, Currency, Token, TradeType } from '@phuphamdeltalabs/sdkcore';
-import { Pair } from '@phuphamdeltalabs/v2-sdk';
-import { Pool } from '@phuphamdeltalabs/v3sdk';
+import { Protocol } from '@tpvinh/router-sdk';
+import { ChainId, Currency, Token, TradeType } from '@tpvinh/sdk-core';
+import { Pair } from '@tpvinh/v2-sdk';
+import { Pool } from '@tpvinh/v3-sdk';
 import _ from 'lodash';
 
 import { ITokenListProvider, ITokenProvider, ITokenValidatorProvider, TokenValidationResult } from '../../../providers';

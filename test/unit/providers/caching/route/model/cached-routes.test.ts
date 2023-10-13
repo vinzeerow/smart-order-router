@@ -1,5 +1,5 @@
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
-import { ChainId, TradeType } from '@phuphamdeltalabs/sdkcore';
+import { Protocol } from '@tpvinh/router-sdk';
+import { ChainId, TradeType } from '@tpvinh/sdk-core';
 import { V3RouteWithValidQuote } from '../../../../../../build/main';
 import { CachedRoutes, DAI_MAINNET as DAI, USDC_MAINNET as USDC } from '../../../../../../src';
 import { getV3RouteWithValidQuoteStub } from '../test-util/mocked-dependencies';

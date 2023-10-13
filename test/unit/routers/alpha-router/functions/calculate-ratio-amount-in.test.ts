@@ -1,4 +1,4 @@
-import { Fraction, Token } from '@phuphamdeltalabs/sdkcore';
+import { Fraction, Token } from '@tpvinh/sdk-core';
 import { parseAmount } from '../../../../../src';
 import { calculateRatioAmountIn } from '../../../../../src/routers/alpha-router/functions/calculate-ratio-amount-in';
 

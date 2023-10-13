@@ -1,14 +1,14 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
+import { Protocol } from '@tpvinh/router-sdk';
 import {
   ChainId,
   Currency,
   CurrencyAmount,
   Token,
   TradeType,
-} from '@phuphamdeltalabs/sdkcore';
-import { Pair } from '@phuphamdeltalabs/v2-sdk/dist/entities';
-import { FeeAmount, Pool } from '@phuphamdeltalabs/v3sdk';
+} from '@tpvinh/sdk-core';
+import { Pair } from '@tpvinh/v2-sdk/dist/entities';
+import { FeeAmount, Pool } from '@tpvinh/v3-sdk';
 import JSBI from 'jsbi';
 import _ from 'lodash';
 

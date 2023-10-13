@@ -1,4 +1,4 @@
-import { Fraction } from '@phuphamdeltalabs/sdkcore';
+import { Fraction } from '@tpvinh/sdk-core';
 
 import { CurrencyAmount } from '../../../util/amounts';
 

@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { ChainId, Token } from '@phuphamdeltalabs/sdkcore';
-import { Pair } from '@phuphamdeltalabs/v2-sdk';
+import { ChainId, Token } from '@tpvinh/sdk-core';
+import { Pair } from '@tpvinh/v2-sdk';
 import retry, { Options as RetryOptions } from 'async-retry';
 import _ from 'lodash';
 

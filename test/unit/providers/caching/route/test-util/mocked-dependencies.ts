@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
-import { ChainId, TradeType } from '@phuphamdeltalabs/sdkcore';
+import { Protocol } from '@tpvinh/router-sdk';
+import { ChainId, TradeType } from '@tpvinh/sdk-core';
 import {
   DAI_MAINNET,
   USDC_MAINNET,

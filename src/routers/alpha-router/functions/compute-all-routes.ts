@@ -1,6 +1,6 @@
-import { Token } from '@phuphamdeltalabs/sdkcore';
-import { Pair } from '@phuphamdeltalabs/v2-sdk';
-import { Pool } from '@phuphamdeltalabs/v3sdk';
+import { Token } from '@tpvinh/sdk-core';
+import { Pair } from '@tpvinh/v2-sdk';
+import { Pool } from '@tpvinh/v3-sdk';
 
 import { log } from '../../../util/log';
 import { poolToString, routeToString } from '../../../util/routes';

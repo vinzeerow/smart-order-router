@@ -1,5 +1,5 @@
-import { ChainId, Token, TradeType } from '@phuphamdeltalabs/sdkcore';
-import { encodeSqrtRatioX96, FeeAmount, Pool } from '@phuphamdeltalabs/v3sdk';
+import { ChainId, Token, TradeType } from '@tpvinh/sdk-core';
+import { encodeSqrtRatioX96, FeeAmount, Pool } from '@tpvinh/v3-sdk';
 import _ from 'lodash';
 import sinon from 'sinon';
 import {

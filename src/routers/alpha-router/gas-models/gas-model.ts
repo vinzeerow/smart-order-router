@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { ChainId, Token } from '@phuphamdeltalabs/sdkcore';
-import { Pool } from '@phuphamdeltalabs/v3sdk';
+import { ChainId, Token } from '@tpvinh/sdk-core';
+import { Pool } from '@tpvinh/v3-sdk';
 
 import { ProviderConfig } from '../../../providers/provider';
 import {

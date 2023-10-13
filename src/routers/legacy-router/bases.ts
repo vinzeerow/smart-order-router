@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { ChainId, Token } from '@phuphamdeltalabs/sdkcore';
+import { ChainId, Token } from '@tpvinh/sdk-core';
 
 import {
   BTC_BNB,

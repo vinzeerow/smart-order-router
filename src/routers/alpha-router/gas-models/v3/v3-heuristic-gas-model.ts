@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { ChainId, Percent, Price, TradeType } from '@phuphamdeltalabs/sdkcore';
-import { Pool } from '@phuphamdeltalabs/v3sdk';
+import { ChainId, Percent, Price, TradeType } from '@tpvinh/sdk-core';
+import { Pool } from '@tpvinh/v3-sdk';
 import _ from 'lodash';
 
 import {

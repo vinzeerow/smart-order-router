@@ -1,4 +1,4 @@
-import { Currency, Ether } from '@phuphamdeltalabs/sdkcore';
+import { Currency, Ether } from '@tpvinh/sdk-core';
 import { BigNumber } from 'ethers';
 import { DAI_MAINNET, V2Route } from '../../../../../src';
 import {

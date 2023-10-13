@@ -1,5 +1,5 @@
-import { CHAIN_TO_ADDRESSES_MAP, ChainId, Token } from '@phuphamdeltalabs/sdkcore';
-import { FACTORY_ADDRESS } from '@phuphamdeltalabs/v3sdk';
+import { CHAIN_TO_ADDRESSES_MAP, ChainId, Token } from '@tpvinh/sdk-core';
+import { FACTORY_ADDRESS } from '@tpvinh/v3-sdk';
 
 import { NETWORKS_WITH_SAME_UNISWAP_ADDRESSES } from './chains';
 

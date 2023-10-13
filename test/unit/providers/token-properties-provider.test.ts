@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@phuphamdeltalabs/sdkcore';
+import { ChainId, Token } from '@tpvinh/sdk-core';
 import NodeCache from 'node-cache';
 import sinon from 'sinon';
 import {

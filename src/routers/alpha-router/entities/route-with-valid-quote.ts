@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
-import { Token, TradeType } from '@phuphamdeltalabs/sdkcore';
-import { Pool } from '@phuphamdeltalabs/v3sdk';
+import { Protocol } from '@tpvinh/router-sdk';
+import { Token, TradeType } from '@tpvinh/sdk-core';
+import { Pool } from '@tpvinh/v3-sdk';
 import _ from 'lodash';
 
 import { IV2PoolProvider } from '../../../providers/v2/pool-provider';

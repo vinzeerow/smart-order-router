@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { ChainId, Token } from '@phuphamdeltalabs/sdkcore';
-import { computePoolAddress, FeeAmount, Pool } from '@phuphamdeltalabs/v3sdk';
+import { ChainId, Token } from '@tpvinh/sdk-core';
+import { computePoolAddress, FeeAmount, Pool } from '@tpvinh/v3-sdk';
 import retry, { Options as RetryOptions } from 'async-retry';
 import _ from 'lodash';
 

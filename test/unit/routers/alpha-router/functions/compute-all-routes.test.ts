@@ -1,5 +1,5 @@
-import { Pair } from '@phuphamdeltalabs/v2-sdk';
-import { encodeSqrtRatioX96, FeeAmount, Pool } from '@phuphamdeltalabs/v3sdk';
+import { Pair } from '@tpvinh/v2-sdk';
+import { encodeSqrtRatioX96, FeeAmount, Pool } from '@tpvinh/v3-sdk';
 import {
   CurrencyAmount,
   DAI_MAINNET as DAI,

@@ -1,4 +1,4 @@
-import { Pool } from '@phuphamdeltalabs/v3sdk';
+import { Pool } from '@tpvinh/v3-sdk';
 import _ from 'lodash';
 
 export const poolEquals = (p1: Pool, p2: Pool) =>

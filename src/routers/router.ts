@@ -4,22 +4,22 @@ import {
   MixedRouteSDK,
   Protocol,
   Trade,
-} from '@phuphamdeltalabs/router-sdk';
+} from '@tpvinh/router-sdk';
 import {
   Currency,
   Fraction,
   Percent,
   Token,
   TradeType,
-} from '@phuphamdeltalabs/sdkcore';
-import { SwapOptions as UniversalRouterSwapOptions } from '@phuphamdeltalabs/universal-router-sdk';
-import { Route as V2RouteRaw } from '@phuphamdeltalabs/v2-sdk';
+} from '@tpvinh/sdk-core';
+import { SwapOptions as UniversalRouterSwapOptions } from '@tpvinh/universal-router-sdk';
+import { Route as V2RouteRaw } from '@tpvinh/v2-sdk';
 import {
   Pool,
   Position,
   MethodParameters as SDKMethodParameters,
   Route as V3RouteRaw,
-} from '@phuphamdeltalabs/v3sdk';
+} from '@tpvinh/v3-sdk';
 
 import { SimulationStatus } from '../providers';
 import { CurrencyAmount } from '../util/amounts';

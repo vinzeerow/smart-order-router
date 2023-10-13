@@ -1,4 +1,4 @@
-import { Token } from '@phuphamdeltalabs/sdkcore';
+import { Token } from '@tpvinh/sdk-core';
 
 import { log } from '../../util';
 import { ProviderConfig } from '../provider';

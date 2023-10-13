@@ -1,4 +1,4 @@
-import { ChainId, Currency, Ether, NativeCurrency, Token } from '@phuphamdeltalabs/sdkcore';
+import { ChainId, Currency, Ether, NativeCurrency, Token } from '@tpvinh/sdk-core';
 
 // WIP: Gnosis, Moonbeam
 export const SUPPORTED_CHAINS: ChainId[] = [

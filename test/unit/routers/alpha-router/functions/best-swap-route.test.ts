@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { ChainId, Fraction, TradeType } from '@phuphamdeltalabs/sdkcore';
-import { Pair } from '@phuphamdeltalabs/v2-sdk';
-import { Pool } from '@phuphamdeltalabs/v3sdk';
+import { ChainId, Fraction, TradeType } from '@tpvinh/sdk-core';
+import { Pair } from '@tpvinh/v2-sdk';
+import { Pool } from '@tpvinh/v3-sdk';
 import JSBI from 'jsbi';
 import _ from 'lodash';
 import sinon from 'sinon';

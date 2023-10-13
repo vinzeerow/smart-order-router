@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { JsonRpcProvider } from '@ethersproject/providers';
-import { ChainId } from '@phuphamdeltalabs/sdkcore';
+import { ChainId } from '@tpvinh/sdk-core';
 
 import { SwapOptions, SwapRoute, SwapType } from '../routers';
 import { log } from '../util';

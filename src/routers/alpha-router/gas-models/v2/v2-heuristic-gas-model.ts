@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { ChainId, Token } from '@phuphamdeltalabs/sdkcore';
-import { Pair } from '@phuphamdeltalabs/v2-sdk';
+import { ChainId, Token } from '@tpvinh/sdk-core';
+import { Pair } from '@tpvinh/v2-sdk';
 import _ from 'lodash';
 
 import { ProviderConfig } from '../../../../providers/provider';

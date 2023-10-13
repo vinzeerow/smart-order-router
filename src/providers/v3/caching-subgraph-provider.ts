@@ -1,4 +1,4 @@
-import { ChainId } from '@phuphamdeltalabs/sdkcore';
+import { ChainId } from '@tpvinh/sdk-core';
 
 import { ICache } from './../cache';
 import { IV3SubgraphProvider, V3SubgraphPool } from './subgraph-provider';

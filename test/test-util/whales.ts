@@ -1,4 +1,4 @@
-import { ChainId, Currency, Ether } from '@phuphamdeltalabs/sdkcore';
+import { ChainId, Currency, Ether } from '@tpvinh/sdk-core';
 import {
   CEUR_CELO,
   CEUR_CELO_ALFAJORES,

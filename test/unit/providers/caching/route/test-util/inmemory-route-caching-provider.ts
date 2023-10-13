@@ -1,5 +1,5 @@
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
-import { ChainId, Currency, CurrencyAmount, Token, TradeType } from '@phuphamdeltalabs/sdkcore';
+import { Protocol } from '@tpvinh/router-sdk';
+import { ChainId, Currency, CurrencyAmount, Token, TradeType } from '@tpvinh/sdk-core';
 import { CachedRoutes, CacheMode, IRouteCachingProvider } from '../../../../../../src';
 
 export class InMemoryRouteCachingProvider extends IRouteCachingProvider {

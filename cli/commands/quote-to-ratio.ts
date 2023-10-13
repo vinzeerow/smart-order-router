@@ -1,7 +1,7 @@
 import { Logger } from '@ethersproject/logger';
 import { flags } from '@oclif/command';
-import { Currency, Ether, Fraction, Percent } from '@phuphamdeltalabs/sdkcore';
-import { Position } from '@phuphamdeltalabs/v3sdk';
+import { Currency, Ether, Fraction, Percent } from '@tpvinh/sdk-core';
+import { Position } from '@tpvinh/v3-sdk';
 import dotenv from 'dotenv';
 import {
   ID_TO_CHAIN_ID,

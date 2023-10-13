@@ -1,7 +1,7 @@
-import { partitionMixedRouteByProtocol } from '@phuphamdeltalabs/router-sdk';
-import { Currency, CurrencyAmount, Ether, Token } from '@phuphamdeltalabs/sdkcore';
-import { Pair } from '@phuphamdeltalabs/v2-sdk';
-import { Pool } from '@phuphamdeltalabs/v3sdk';
+import { partitionMixedRouteByProtocol } from '@tpvinh/router-sdk';
+import { Currency, CurrencyAmount, Ether, Token } from '@tpvinh/sdk-core';
+import { Pair } from '@tpvinh/v2-sdk';
+import { Pool } from '@tpvinh/v3-sdk';
 import { BigNumber } from 'ethers';
 import _ from 'lodash';
 import {

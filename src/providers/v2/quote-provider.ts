@@ -1,9 +1,9 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { TradeType } from '@phuphamdeltalabs/sdkcore';
+import { TradeType } from '@tpvinh/sdk-core';
 import {
   InsufficientInputAmountError,
   InsufficientReservesError,
-} from '@phuphamdeltalabs/v2-sdk';
+} from '@tpvinh/v2-sdk';
 
 import { V2Route } from '../../routers/router';
 import { CurrencyAmount } from '../../util/amounts';

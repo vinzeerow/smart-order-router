@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Ether, Token } from '@phuphamdeltalabs/sdkcore';
+import { Currency, CurrencyAmount, Ether, Token } from '@tpvinh/sdk-core';
 import { BigNumber } from 'ethers';
 import _ from 'lodash';
 import {

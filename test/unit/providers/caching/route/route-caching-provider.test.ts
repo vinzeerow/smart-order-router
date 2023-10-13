@@ -1,5 +1,5 @@
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
-import { CurrencyAmount, TradeType } from '@phuphamdeltalabs/sdkcore';
+import { Protocol } from '@tpvinh/router-sdk';
+import { CurrencyAmount, TradeType } from '@tpvinh/sdk-core';
 import { DAI_MAINNET as DAI, USDC_MAINNET as USDC, WBTC_MAINNET as WBTC } from '../../../../../build/main';
 import { CachedRoutes, CacheMode } from '../../../../../src';
 import { InMemoryRouteCachingProvider } from './test-util/inmemory-route-caching-provider';

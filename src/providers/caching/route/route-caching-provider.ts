@@ -4,8 +4,8 @@
  * @export
  * @interface IRouteCachingProvider
  */
-import { Protocol } from '@phuphamdeltalabs/router-sdk';
-import { ChainId, Currency, CurrencyAmount, Token, TradeType } from '@phuphamdeltalabs/sdkcore';
+import { Protocol } from '@tpvinh/router-sdk';
+import { ChainId, Currency, CurrencyAmount, Token, TradeType } from '@tpvinh/sdk-core';
 
 import { CacheMode } from './model';
 import { CachedRoutes } from './model/cached-routes';
